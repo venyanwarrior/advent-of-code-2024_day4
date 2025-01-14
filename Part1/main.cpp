@@ -44,7 +44,7 @@ int searchAllDirections(std::vector<std::string> wordSearch, uint xPos, uint yPo
         for (uint j = 0; j < 4; j++) {
             try {
                 currentString += wordSearch.at(yPos + (j * yDirection)).at(xPos + (j * xDirection));
-            } catch (std::out_of_range& e) {
+            } catch (std::out_of_range& e) { //Bad practice but it works anyway, integer underflow is fine here
                 //std::cout << "Out of range" << std::endl;
             }
         }
